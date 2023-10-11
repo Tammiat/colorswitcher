@@ -1,7 +1,13 @@
-let color ="yellow"
+const color = ["pink","orange","purple","blue", "yellow"];
+function generateNumber() {
+
+    return Math.floor(Math.random() * color.length);
+}
 function setBgColor(){
-    document.getElementById("bg").style.backgroundColor = color;
-    document.getElementById("bgcolor").innerHTML = color;
-    document.getElementById("bgcolor").style.color = color;
+    const randomNumber = generateNumber();
+    document.getElementById("bg").style.backgroundColor= color[randomNumber];
+    document.getElementById("bgcolor").innerHTML= color[randomNumber];
+    document.getElementById("bgcolor").style.color= color;
+    console.log(color.length);
 }
 document.getElementById("bgbutton").addEventListener("click",setBgColor)
